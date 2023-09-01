@@ -8,7 +8,7 @@ ActiveAdmin.register Post do
   permit_params :title, :body, :admin_user_id, images:[]
 
   form do |f|
-    f.inputs do
+    f.inputs do 
     	li class: "string input optional stringish" do
     		label :admin_user_id, class: "label"
     		f.collection_select :admin_user_id, AdminUser.all, :id, :email
