@@ -1,11 +1,15 @@
 ActiveAdmin.register Post do
-
+  menu priority: 4
+  active_admin_import
+  action_item :view, only: :index do
+    link_to 'Button text', "#"
+  end
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :title, :body, :admin_user_id, images:[]
+  permit_params :title, :body, :admin_user_id, :active, images:[]
 
   form do |f|
     f.inputs do 
@@ -15,6 +19,7 @@ ActiveAdmin.register Post do
     	end
       f.input :title
       f.input :body
+      f.input :active
       if f.object.images.attached?
       	f.input :images, as: :file, input_html: { multiple: true },hint: image_tag(f.object.images.first, size: "100")
       else

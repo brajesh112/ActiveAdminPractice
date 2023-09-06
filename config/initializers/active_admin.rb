@@ -4,8 +4,8 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Active Admin Practice"
-
+  config.site_title = "Admin"
+  
   meta_tags_options = { viewport: 'width=device-width, initial-scale=1' }
   config.meta_tags = meta_tags_options
   config.meta_tags_for_logged_out_pages = meta_tags_options
@@ -13,14 +13,14 @@ ActiveAdmin.setup do |config|
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
-  # config.site_title_link = "/"
+   config.site_title_link = "/"
 
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
   #
   # Note: Aim for an image that's 21px high so it fits in the header.
   #
-  # config.site_title_image = "logo.png"
+  # config.site_title_image = "profile.png"
 
   # == Load Paths
   #
@@ -60,9 +60,9 @@ ActiveAdmin.setup do |config|
   # a namespace block. For example, to change the site title
   # within a namespace:
   #
-  #   config.namespace :admin do |admin|
-  #     admin.site_title = "Custom Admin Title"
-  #   end
+    # config.namespace :admin do |admin|
+    #   admin.site_title = "Custom Admin Title"
+    # end
   #
   # This will ONLY change the title for the admin section. Other
   # namespaces will continue to use the main "site_title" configuration.
@@ -125,7 +125,7 @@ ActiveAdmin.setup do |config|
   #
   # Default:
   config.logout_link_path = :destroy_admin_user_session_path
-
+  # config.signup_link_path = :new_admin_admin_user_path
   # This setting changes the http method used when rendering the
   # link. For example :get, :delete, :put, etc..
   #
@@ -155,16 +155,16 @@ ActiveAdmin.setup do |config|
   # config.comments_order = 'created_at ASC'
   #
   # You can disable the menu item for the comments index page:
-  # config.comments_menu = false
+   config.comments_menu = false
   #
   # You can customize the comment menu:
-  # config.comments_menu = { parent: 'Admin', priority: 1 }
+   # config.comments_menu = { parent: 'Admin', priority: 1 }
 
   # == Batch Actions
   #
   # Enable and disable Batch Actions
   #
-  config.batch_actions = true
+   config.batch_actions = true
 
   # == Controller Filters
   #
@@ -189,7 +189,7 @@ ActiveAdmin.setup do |config|
   # You can run `bin/rails runner 'puts I18n.t("date.formats")'` to see the
   # available formats in your application.
   #
-  config.localize_format = :long
+  config.localize_format = :short
 
   # == Setting a Favicon
   #
@@ -236,7 +236,9 @@ ActiveAdmin.setup do |config|
   #
   # To load a javascript file:
   #   config.register_javascript 'my_javascript.js'
-
+    config.register_javascript "https://unpkg.com/slim-select@latest/dist/slimselect.min.js"
+    config.register_stylesheet "https://unpkg.com/slim-select@latest/dist/slimselect.css"
+  
   # == CSV options
   #
   # Set the CSV builder separator
@@ -251,20 +253,20 @@ ActiveAdmin.setup do |config|
   #
   # To change the default utility navigation to show a link to your website & a logout btn
   #
-  #   config.namespace :admin do |admin|
-  #     admin.build_menu :utility_navigation do |menu|
-  #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
-  #       admin.add_logout_button_to_menu menu
-  #     end
-  #   end
+    # config.namespace :admin do |admin|
+    #   admin.build_menu :utility_navigation do |menu|
+    #     menu.add label: "Sign Up", url: :new_admin_admin_user_path , html_options: { target: :blank }
+    #     admin.add_logout_button_to_menu menu
+    #   end
+    # end
   #
   # If you wanted to add a static menu item to the default menu provided:
   #
-  #   config.namespace :admin do |admin|
-  #     admin.build_menu :default do |menu|
-  #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
-  #     end
-  #   end
+    # config.namespace :admin do |admin|
+    #   admin.build_menu :default do |menu|
+    #     menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
+    #   end
+    # end
 
   # == Download Links
   #
@@ -273,30 +275,30 @@ ActiveAdmin.setup do |config|
   #
   # To disable/customize for the :admin namespace:
   #
-  #   config.namespace :admin do |admin|
+    # config.namespace :admin do |admin|
   #
   #     # Disable the links entirely
-  #     admin.download_links = false
+      # admin.download_links = false
   #
   #     # Only show XML & PDF options
-  #     admin.download_links = [:xml, :pdf]
+      # admin.download_links = [:xml, :pdf]
   #
   #     # Enable/disable the links based on block
   #     #   (for example, with cancan)
   #     admin.download_links = proc { can?(:view_download_links) }
   #
-  #   end
+    # end
 
   # == Pagination
   #
   # Pagination is enabled by default for all resources.
   # You can control the default per page count for all resources here.
   #
-  # config.default_per_page = 30
+   # config.default_per_page = 2
   #
   # You can control the max per page count too.
   #
-  # config.max_per_page = 10_000
+   # config.max_per_page = 10_000
 
   # == Filters
   #
@@ -338,7 +340,7 @@ ActiveAdmin.setup do |config|
   # By default, the footer shows the current Active Admin version. You can
   # override the content of the footer here.
   #
-  # config.footer = 'my custom footer text'
+   # config.footer = 'my custom footer text'
 
   # == Sorting
   #

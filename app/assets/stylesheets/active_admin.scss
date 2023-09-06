@@ -9,8 +9,39 @@
 
 // Active Admin's got SASS!
 @import "arctic_admin/base";
-
+@import "jquery-ui.css";
 // Overriding any non-variable Sass must be done after the fact.
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
+
+.ss-main{
+	width: 50% !important; 
+}
+
+.link_button{
+    background-color: #4bacfe;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    display: inline-block;
+    -webkit-transition: border 0.2s linear, color 0.2s linear, width 0.2s linear, background-color 0.2s linear;
+    -o-transition: border 0.2s linear, color 0.2s linear, width 0.2s linear, background-color 0.2s linear;
+    transition: border 0.2s linear, color 0.2s linear, width 0.2s linear, background-color 0.2s linear;
+    cursor: pointer;
+    padding: 4px 8px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+.container{
+    background-color: red;
+    height: 131px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.count_value{
+	  justify-content: center;
+    display: flex;
+}

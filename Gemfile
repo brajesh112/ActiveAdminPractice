@@ -52,6 +52,11 @@ gem 'active_admin_role'
 gem 'draper'
 gem 'pundit'
 gem 'arctic_admin'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'chartkick'
+gem "groupdate"
+gem "active_admin_import"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
