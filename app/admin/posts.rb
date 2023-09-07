@@ -4,12 +4,15 @@ ActiveAdmin.register Post do
   action_item :view, only: :index do
     link_to 'Button text', "#"
   end
+  scope :all
+  scope("Inactive") { |scope| scope.where(status: false) }
+  scope("Active") { |scope| scope.where(status: true) }
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :title, :body, :admin_user_id, :active, images:[]
+  permit_params :title, :body, :admin_user_id, :status, images:[]
 
   form do |f|
     f.inputs do 
@@ -19,7 +22,7 @@ ActiveAdmin.register Post do
     	end
       f.input :title
       f.input :body
-      f.input :active
+      f.input :status
       if f.object.images.attached?
       	f.input :images, as: :file, input_html: { multiple: true },hint: image_tag(f.object.images.first, size: "100")
       else

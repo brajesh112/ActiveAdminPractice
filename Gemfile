@@ -59,6 +59,11 @@ gem "groupdate"
 gem "active_admin_import"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
+# Rails 5.2 and Rails 6
+gem 'active_storage_validations'
+
+# Optional, to use :dimension validator or :aspect_ratio validator
+gem 'mini_magick', '>= 4.9.5'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

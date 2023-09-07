@@ -1,0 +1,4 @@
+<%= semantic_form_for 'dashboard', :url => admin_dashboard_path , html: {method: :get}, class: "form_class" do |f| %>
+  <%= f.select :time,[['1 Day', '1d'], ['1 week', '1w'], ['1 month', '1m'],['1 Year', '1y']],:prompt => "Select Value To Sort Data" %>
+  <%= f.submit "search", class: "submit_type" %>
+<% end %>

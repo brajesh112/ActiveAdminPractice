@@ -20,28 +20,63 @@
 }
 
 .link_button{
-    background-color: #4bacfe;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    display: inline-block;
-    -webkit-transition: border 0.2s linear, color 0.2s linear, width 0.2s linear, background-color 0.2s linear;
-    -o-transition: border 0.2s linear, color 0.2s linear, width 0.2s linear, background-color 0.2s linear;
-    transition: border 0.2s linear, color 0.2s linear, width 0.2s linear, background-color 0.2s linear;
-    cursor: pointer;
-    padding: 4px 8px;
-    margin-right: 4px;
-    margin-bottom: 4px;
+  background-color: #4bacfe;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  display: inline-block;
+  -webkit-transition: border 0.2s linear, color 0.2s linear, width 0.2s linear, background-color 0.2s linear;
+  -o-transition: border 0.2s linear, color 0.2s linear, width 0.2s linear, background-color 0.2s linear;
+  transition: border 0.2s linear, color 0.2s linear, width 0.2s linear, background-color 0.2s linear;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-right: 4px;
+  margin-bottom: 4px;
 }
 .container{
-    background-color: red;
-    height: 131px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    color: white;
+  background-color: #bf5959;
+  height: 131px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+}
+.container-1{
+  background-color: #6969a5;
+  height: 131px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
 }
 .count_value{
-	  justify-content: center;
-    display: flex;
+  justify-content: center;
+  display: flex;
+  font-size: 30px;
+}
+.form_end{
+	display: flex;
+  justify-content: end;
+}
+.dashboard{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 20px !important;
+  height: 37px;
+}
+#dashboard_time{
+  width: 236px;
+  height: 100%;
+  border-radius: 5px;
+  margin: 0 0 0 8px;
+}
+.submit_type{
+	width: 103px !important;
+  height: 35px !important;
+}
+.bold_li{
+	font-size: 40px;
 }
